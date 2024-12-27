@@ -20,8 +20,8 @@
       border: 1px solid #ddd;
       padding: $espaciado-general;
       margin: 20px;
-      width: 300px; // Ancho fijo
-      min-height: 400px; // Altura mínima uniforme
+      width: 300px;
+      min-height: 400px;
       text-align: center;
       box-shadow: $sombra-card;
       @include transicion(box-shadow, 0.3s);
@@ -88,7 +88,6 @@
     }
   }
   //video de tienda
-  // Estilos para la sección que contiene el video
 .video-section {
   text-align: center;
   margin: 50px 0;
@@ -100,16 +99,29 @@
   }
 
   .video-container {
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-      position: relative;
-
-      video {
-          width: auto;
-          height: auto;
-          border-radius: 10px; // Redondear los bordes del video
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añadir sombra sutil al video
-      }
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50%;
+    width: 100%;
+  
+    @media (min-width: 768px) {
+      width:50%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      border-radius: 10px;
+    }
   }
+  
+
 }
