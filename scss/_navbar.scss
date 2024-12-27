@@ -1,0 +1,17 @@
+// Navbar
+.navbar {
+  background-color: $color-primario;
+
+  .navbar-nav .nav-link {
+    color: white;
+    @include transicion(color, 0.3s);
+    
+    &:hover {
+      color: $color-secundario;
+    }
+  }
+
+  .navbar-toggler-icon {
+    color: white;
+  }
+}

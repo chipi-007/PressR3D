@@ -1,0 +1,115 @@
+// Titulo de la página
+.titulo {
+    margin-top: $espaciado-medio;
+    font-size: 2.5rem;
+    color: $color-primario;
+    text-align: center;
+  }
+  
+  // Card Container
+  .card-container {
+    @include centrar-elemento(100%, auto);
+    gap: $espaciado-general;
+    margin-top: $espaciado-medio;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: $espaciado-general;
+      margin: 20px;
+      width: 300px; // Ancho fijo
+      min-height: 400px; // Altura mínima uniforme
+      text-align: center;
+      box-shadow: $sombra-card;
+      @include transicion(box-shadow, 0.3s);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      h3 {
+        color: $color-primario;
+        font-size: 1.5rem;
+        margin-bottom: $espaciado-general;
+      }
+  
+      img {
+        width: 100%;
+        margin-bottom: $espaciado-general;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: $color-secundario;
+        margin-bottom: $espaciado-general;
+        text-align: justify;
+      }
+    }
+  }
+  
+  // Formulario de contacto
+  form {
+    margin-top: $espaciado-medio;
+  
+    .form-control {
+      margin-bottom: $espaciado-general;
+    }
+  
+    .btn-primary {
+      background-color: $color-secundario;
+      border: none;
+      @include hover-boton($color-secundario);
+    }
+  }
+
+  .contenedor-trabajos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: $espaciado-medio auto; 
+    max-width: 500px;
+    padding: $espaciado-general;
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: $sombra-card;
+    background-color: #ffffff; 
+
+    .texto-carousel{
+      font-weight: bold;
+      color: #ffffff;
+      background-color: rgba(39, 39, 38, 0.5);
+    }
+
+    #carouselExampleCaptions {
+      width: 100%; 
+      max-width: 100%; 
+    }
+  }
+  //video de tienda
+  // Estilos para la sección que contiene el video
+.video-section {
+  text-align: center;
+  margin: 50px 0;
+
+  h2 {
+      font-size: 2rem;
+      color: $color-primario;
+      margin-bottom: 20px;
+  }
+
+  .video-container {
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+
+      video {
+          width: auto;
+          height: auto;
+          border-radius: 10px; // Redondear los bordes del video
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Añadir sombra sutil al video
+      }
+  }
+}

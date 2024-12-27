@@ -1,0 +1,20 @@
+// Mixin para hover en botones
+@mixin hover-boton($color) {
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+}
+
+// Mixin para animación de transiciones
+@mixin transicion($propiedad, $duracion) {
+  transition: $propiedad $duracion ease;
+}
+
+// Mixin para centrar un elemento
+@mixin centrar-elemento($ancho: 100%, $alto: auto) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $ancho;
+  height: $alto;
+}
